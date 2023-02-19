@@ -56,7 +56,7 @@ function drawMeteorites() {
     // getBounds() in http://leafletjs.com/reference-1.1.0.html
     if (myMap.map.getBounds().contains({lat: latitude, lng: longitude})) {
       // Transform lat/lng to pixel position
-      const pos = myMap.latLngToPixel(49.2606, 123.2460);
+      const pos = myMap.latLngToPixel(latitude, longitude);
       // Get the size of the meteorite and map it. 60000000 is the mass of the largest
       // meteorite (https://en.wikipedia.org/wiki/Hoba_meteorite)
       let size = meteorites.getString(i, 'mass (g)');
